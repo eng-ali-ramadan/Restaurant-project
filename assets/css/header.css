@@ -1,0 +1,274 @@
+/* Global Styles */
+* {
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth; 
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    text-align: left;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Cart Icon Styles */
+.cart-icon-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    font-size: 10px;
+    padding: 3px 6px;
+}
+
+#cart-items-wrapper .btn-outline-secondary {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 15px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    line-height: 1 !important;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: red;
+}
+
+.logo h1 {
+    font-size: 35px;
+    text-shadow: 0 3px 10px #df08086e;
+}
+
+.nav-link ul {
+    margin: 10px;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-link ul li {
+    padding: 5px;
+}
+
+.nav-link ul li a:hover {
+    background-color: red;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.third-clo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Search Input */
+#menu-search-input {
+    max-width: 400px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid #ced4da;
+    text-align: center;
+    font-size: 14px;
+}
+
+#menu-search-input:focus {
+    border-color: #ad343e;
+    outline: none;
+    box-shadow: 0 0 5px rgba(173, 52, 62, 0.3);
+}
+
+/* Icon Styles */
+i {
+    color: rgb(255, 0, 0);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+i:hover {
+    color: rgb(181, 181, 231);
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(to right, #000000, #3a0505);
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer h1 {
+    font-size: 35px;
+    color: red;
+    text-shadow: 0 3px 10px #df08086e;
+}
+
+.second-side, .last-side, .mail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.footer a {
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: rgb(181, 181, 231);
+}
+
+.footer p {
+    color: white;
+    margin: 5px 0;
+}
+
+.footer hr {
+    width: 80%;
+    margin-top: 20px;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .nav-link ul {
+        gap: 5px;
+        margin: 5px;
+    }
+
+    .nav-link ul li {
+        padding: 3px;
+        font-size: 14px;
+    }
+
+    #menu-search-input {
+        max-width: 250px;
+        font-size: 12px;
+    }
+
+    .third-clo {
+        gap: 5px;
+    }
+
+    i {
+        font-size: 20px;
+    }
+
+    .second-side, .last-side, .mail {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .footer ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footer {
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 8px 0;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .nav-link ul {
+        gap: 3px;
+        margin: 3px;
+    }
+
+    .nav-link ul li {
+        padding: 2px;
+        font-size: 12px;
+    }
+
+    #menu-search-input {
+        max-width: 150px;
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    i {
+        font-size: 18px;
+    }
+}

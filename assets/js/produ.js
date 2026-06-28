@@ -1,0 +1,35 @@
+const productsData = [
+    { id: 1, category: "Breakfast", price: 120, discount: "", name: "Pizza Margherita", image: "assets/images/pizza.png", msg: "Fresh tomato sauce, mozzarella cheese, and basil." },
+    { id: 2, category: "Main Dishes", price: 85, discount: "-10%", name: "Chicken Burger", image: "assets/images/pizza.png", msg: "Grilled chicken burger with lettuce and special sauce." },
+    { id: 3, category: "Main Dishes", price: 60, discount: "", name: "French Fries", image: "assets/images/pizza.png", msg: "Crispy golden fries with ketchup." },
+    { id: 4, category: "Main Dishes", price: 150, discount: "-15%", name: "Mixed Grill", image: "assets/images/pizza.png", msg: "Kofta, kebab, and grilled chicken served with rice." },
+    { id: 5, category: "Main Dishes", price: 45, discount: "", name: "Shawarma Sandwich", image: "assets/images/pizza.png", msg: "Chicken shawarma wrapped in fresh bread." },
+    { id: 6, category: "Breakfast", price: 35, discount: "", name: "Caesar Salad", image: "assets/images/pizza.png", msg: "Fresh lettuce, parmesan cheese, and Caesar dressing." },
+    { id: 7, category: "Main Dishes", price: 70, discount: "-5%", name: "Fried Chicken Meal", image: "assets/images/pizza.png", msg: "Crispy fried chicken with fries and drink." },
+    { id: 8, category: "Desserts", price: 30, discount: "", name: "Ice Cream", image: "assets/images/pizza.png", msg: "Vanilla ice cream with chocolate topping." },
+    { id: 9, category: "Desserts", price: 25, discount: "", name: "Chocolate Cake", image: "assets/images/pizza.png", msg: "Soft chocolate cake with rich cream." },
+    { id: 10, category: "Drinks", price: 20, discount: "-20%", name: "Orange Juice", image: "assets/images/pizza.png", msg: "Freshly squeezed orange juice." }
+];
+
+function Products(data) {
+    const container = document.querySelector(".discount-card");
+    if(!container) return; 
+    
+    container.innerHTML = "";
+
+    data.forEach(p => {
+        container.innerHTML += `
+            <div class="dis">
+                <div class="disbg"></div>
+                <div class="details">
+                    <h4>${p.name}</h4>
+                    <p>${p.msg || ''}</p>
+                    <p>the price <span>${p.price} EGP</span></p>
+                    <button class="add-to-cart-btn" data-id="${p.id}">Give me that</button>
+                </div>
+            </div>
+        `;
+    });
+}
+
+Products(productsData);

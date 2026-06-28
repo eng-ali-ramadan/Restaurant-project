@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Bistro Bliss</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .checkout-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .order-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .checkout-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-section {
+            margin-bottom: 30px;
+        }
+        .form-section h4 {
+            color: #ad343e;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .btn-checkout {
+            background-color: #ad343e;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+        }
+        .btn-checkout:hover {
+            background-color: #8a2830;
+            color: white;
+        }
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .order-item:last-child {
+            border-bottom: none;
+        }
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ad343e;
+            border-top: 2px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+               <h1>Bistro Bliss</h1> 
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="third-clo">
+                <a href="../index.html"><button>Back to Home</button></a>
+            </div>
+        </nav> 
+    </header>
+
+    <div class="checkout-container">
+        <h1 class="text-center mb-4">Order Checkout</h1>
+
+        <div class="row g-4">
+            <!-- Order Summary -->
+            <div class="col-md-5">
+                <div class="order-summary">
+                    <h4 class="mb-3">Order Summary</h4>
+                    <div id="checkout-items-wrapper">
+                        <p class="text-muted text-center">Loading order items...</p>
+                    </div>
+                    <div class="total-row">
+                        <span>Total:</span>
+                        <span id="checkout-total">0 EGP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <div class="col-md-7">
+                <form class="checkout-form needs-validation" id="checkout-form" novalidate>
+                    
+                    <div class="form-section">
+                        <h4>Billing Information</h4>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                                <div class="invalid-feedback">First name is required.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                                <div class="invalid-feedback">Last name is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Contact Information</h4>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">Valid email is required.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                            <div class="invalid-feedback">Phone number is required.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Delivery Address</h4>
+                        
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Street Address</label>
+                            <input type="text" class="form-control" id="address" required>
+                            <div class="invalid-feedback">Address is required.</div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" required>
+                                <div class="invalid-feedback">City is required.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="zip" class="form-label">Postal Code</label>
+                                <input type="text" class="form-control" id="zip" required>
+                                <div class="invalid-feedback">Postal code is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Payment Method</h4>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="payment" id="payment-cash" value="cash" checked>
+                            <label class="form-check-label" for="payment-cash">
+                                Cash on Delivery
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="payment" id="payment-card" value="card">
+                            <label class="form-check-label" for="payment-card">
+                                Credit/Debit Card
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="terms" required>
+                        <label class="form-check-label" for="terms">
+                            I agree to the terms and conditions
+                        </label>
+                        <div class="invalid-feedback">You must agree to the terms.</div>
+                    </div>
+
+                    <button type="submit" class="btn-checkout">Complete Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 50px;">
+        <div>
+            <h1>Bistro Bliss</h1>
+            <p>In the new era of technology we look in the future with certainty and pride for our company.</p>
+        </div>
+        <div class="second-side">
+            <h4>Pages</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="last-side">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="mail">
+            <p>Email</p>
+            <a href="mailto:asd583129@gmail.com">asd583129@gmail.com</a> 
+        </div>
+        <div>
+            <p>Copyright © 2026 FITU Developer. All Rights Reserved</p> 
+            <hr>
+        </div>
+    </footer>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load cart from localStorage
+            const cartData = JSON.parse(localStorage.getItem('restaurant_cart')) || [];
+            const wrapper = document.getElementById('checkout-items-wrapper');
+            const totalElement = document.getElementById('checkout-total');
+
+            if (cartData.length === 0) {
+                wrapper.innerHTML = '<p class="text-muted text-center">Your cart is empty. <a href="menu.html">Continue shopping</a></p>';
+                totalElement.textContent = '0 EGP';
+                return;
+            }
+
+            let total = 0;
+            wrapper.innerHTML = '';
+
+            cartData.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'order-item';
+                itemDiv.innerHTML = `
+                    <div>
+                        <strong>${item.name}</strong>
+                        <small class="d-block text-muted">Qty: ${item.quantity}</small>
+                    </div>
+                    <span>${itemTotal} EGP</span>
+                `;
+                wrapper.appendChild(itemDiv);
+            });
+
+            totalElement.textContent = total + ' EGP';
+
+            // Form submission
+            document.getElementById('checkout-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                if (!document.getElementById('checkout-form').checkValidity()) {
+                    e.stopPropagation();
+                    document.getElementById('checkout-form').classList.add('was-validated');
+                    return;
+                }
+
+                // Simulate order processing
+                alert('Order placed successfully! Thank you for your purchase.');
+                localStorage.removeItem('restaurant_cart');
+                window.location.href = '../index.html';
+            });
+        });
+    </script>
+</body>
+</html>

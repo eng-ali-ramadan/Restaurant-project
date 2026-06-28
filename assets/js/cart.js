@@ -111,5 +111,5 @@ document.querySelector('#offcanvasCart .btn-danger').addEventListener('click', (
         return;
     }
     localStorage.setItem('restaurant_cart', JSON.stringify(cart));
-    window.location.href = "../html/checkout.html"; 
+    window.location.href = "pages/checkout.html"; 
 });

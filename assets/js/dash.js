@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localProducts = JSON.parse(savedProducts);
         renderDashboardTable();
     } else {
-        fetch('../js/products.json') // تأكد من مسار الملف عندك صح
+        fetch('assets/js/products.json') // تأكد من مسار الملف عندك صح
             .then(response => response.json())
             .then(data => {
                 localProducts = data;
@@ -72,7 +72,7 @@ function handleAddProduct(e) {
 
     const fileName = imageInput.files[0].name;
     
-    const fullImagePath = `../image/${fileName}`;
+    const fullImagePath = `assets/images/${fileName}`;
 
     const newId = localProducts.length > 0 ? Math.max(...localProducts.map(p => p.id)) + 1 : 1;
     

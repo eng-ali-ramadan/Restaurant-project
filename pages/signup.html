@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Bistro Bliss</title>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+
+
+</head>
+<body>
+       <header style="background-color: rgb(249, 250, 251);" class="header">
+       
+        
+        <nav class="nav">
+            <div class="logo">
+               <h1>Bistro Bliss</h1> 
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+            <div class="third-clo">
+           <a href="menu.html"><button>Order now</button></a>
+           <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i></a>
+            </div>
+
+    </header>
+    <main class="signup">
+        <section>
+            <h1>Sign Up</h1>
+            <p>Enter your details</p>
+            <form method="post">
+                <input type="text" name="fname" placeholder="first name" required autofocus aria-label="First Name"> 
+                <input type="text" name="sname" placeholder="second name" required aria-label="Second Name"> 
+                <input type="email" name="mail" id="email" placeholder="email" required aria-label="Email"> 
+                <input type="password" name="password" placeholder="password" required aria-label="Password"> 
+               <div>
+                   <button type="button" onclick="checkEmail()">Send</button>
+                   <a href="login.html">login</a> 
+
+               </div>
+            </form>
+            
+        </section>
+    </main>
+    <footer class="footer">
+        
+            
+                <div>
+                    <h1>Bistro Bliss</h1>
+
+                    <p>In the new era of technology we look in the future with certainty and pride for our company.</p>
+              
+                </div>
+
+                
+
+            <div class="second-side">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+            
+           
+                   <div class="last-side">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+
+                <div class="mail">
+                    <p>Email</p>
+                    <a href="mailto:asd583129@gmail.com">asd583129@gmail.com</a> 
+                </div>
+        
+
+        
+                 <div>
+               <p>Copyright © 2026 FITU Developer. All Rights Reserved</p> 
+                     <hr>
+                </div>
+    
+    </footer>
+</body>
+
+<script>
+  function checkEmail() {
+    let email = document.getElementById("email").value;
+
+    if (email.endsWith(".com")) {
+        alert("Success!");
+        window.location.href = "../index.html";
+        
+    }
+    else{
+        alert("Invalid email address");
+    }
+}
+</script>
+</html>
