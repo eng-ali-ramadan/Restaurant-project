@@ -1,18 +1,36 @@
+/* Dashboard Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* جعل لوحة التحكم باللغة العربية المتناسقة */
+    background-color: #f8f9fa;
 }
 
+/* Form Controls */
 .form-control, .form-select {
     border: 1px solid #dee2e6;
     padding: 10px 12px;
     border-radius: 8px;
     font-size: 14px;
+    transition: all 0.3s ease;
 }
 
 .form-control:focus, .form-select:focus {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.15);
+    border-color: #ad343e;
+    box-shadow: 0 0 0 0.25rem rgba(173, 52, 62, 0.15);
+    outline: none;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Table Styles */
+.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .table img {
@@ -26,15 +44,209 @@ body {
     font-weight: 600;
     color: #495057;
     font-size: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
 }
 
 .table td {
     font-size: 14px;
     color: #212529;
+    vertical-align: middle;
+    padding: 12px;
 }
 
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Buttons */
 .btn-sm {
-    padding: 5px 10px;
+    padding: 6px 12px;
     font-size: 13px;
     border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger {
+    color: #ad343e;
+    border-color: #ad343e;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ad343e;
+    border-color: #ad343e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: #ad343e;
+    border-color: #ad343e;
+}
+
+.btn-danger:hover {
+    background-color: #8a2830;
+    border-color: #8a2830;
+}
+
+/* Form Section */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+#submit-btn {
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+/* Dashboard Container */
+.container {
+    margin-top: 80px;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
+    .row {
+        gap: 20px;
+    }
+
+    .col-lg-4,
+    .col-lg-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .table {
+        font-size: 13px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+
+    .table img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 60px;
+        padding: 0 10px;
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .form-control, .form-select {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .form-label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+    }
+
+    .table img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .btn-sm {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    #submit-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 480px) {
+    .container {
+        margin-top: 50px;
+        padding: 0 5px;
+    }
+
+    .card {
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .form-control, .form-select {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .form-label {
+        font-size: 12px;
+    }
+
+    .table {
+        font-size: 11px;
+    }
+
+    .table th,
+    .table td {
+        padding: 6px;
+    }
+
+    .table img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-sm {
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+
+    #submit-btn {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }

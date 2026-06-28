@@ -1,78 +1,202 @@
-.signup{
-    height: 800px;
+/* Signup/Login Page Styles */
+.signup {
+    min-height: 100vh;
     width: 100%;
-display: flex;
-font-size: 20px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px 20px;
+    background-color: #f9f9f9;
+    font-size: 16px;
 }
 
- .signup section {
+.signup section {
     margin: auto;
-    height: 450px;
-    width: 400px; 
-    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
     border-radius: 12px;
     text-align: center;
     border: 1px solid #eeeaea;
-    justify-content: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
-.signup h1{
-    font-size: 45px;
+
+.signup section:hover {
+    box-shadow: 0 8px 24px rgba(173, 52, 62, 0.15);
+    transform: translateY(-2px);
 }
-.signup form{
+
+.signup h1 {
+    font-size: 32px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.signup section > p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.signup form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-}
-    
-    
- .signup section:hover{
-    
-     box-shadow: 0 10px 20px rgba(255, 0, 0, 0.137);
-    transform:scaleY(1.005);
-}
-.signup form input{
-    margin: auto;
-    height: 35px;
-    width: 230px;
-    border-radius: 50px;
-    padding-left: 20px;
-    border: none;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.123);
-
-}
-.signup form input:hover{
-        box-shadow: 1px 10px 10px rgba(255, 0, 0, 0.091);
-        transform:scaleY(1.005);
-
-}
-.signup form input:focus{
-    border: 1px solid #ff0000b8 !important;
+    gap: 15px;
 }
 
+.signup form input {
+    height: 40px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
 
-.signup form button{
-    margin-left: -90px;
+.signup form input:hover {
+    border-color: #ad343e;
+    box-shadow: 0 2px 8px rgba(173, 52, 62, 0.1);
+}
 
-    border-radius: 50px;
+.signup form input:focus {
+    outline: none;
+    border-color: #ad343e;
+    box-shadow: 0 0 8px rgba(173, 52, 62, 0.2);
+}
+
+/* Form Buttons Container */
+.signup form > div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.signup form button {
+    border-radius: 25px;
     width: 120px;
-    height: 40px; 
-    color: black;
-    background-color: #ff0000b8;
-    border: none;
-}
- .signup form button:hover{
+    height: 40px;
     color: white;
-    transition: 0.5s;
+    background-color: #ad343e;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.signup a{
-    position: relative;
-    left: 70px;
+
+.signup form button:hover {
+    background-color: #8a2830;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(173, 52, 62, 0.3);
+}
+
+.signup form button:active {
+    transform: translateY(0);
+}
+
+.signup a {
     text-decoration: none;
-    color: red;
-    
+    color: #ad343e;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup a:hover {
+    color: #8a2830;
+    text-decoration: underline;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+    .signup {
+        padding: 50px 15px 20px;
+        min-height: auto;
+    }
+
+    .signup section {
+        max-width: 350px;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .signup h1 {
+        font-size: 28px;
+    }
+
+    .signup section > p {
+        font-size: 13px;
+    }
+
+    .signup form {
+        gap: 12px;
+    }
+
+    .signup form input {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .signup form button {
+        width: 110px;
+        height: 38px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 480px) {
+    .signup {
+        padding: 40px 10px 20px;
+        min-height: auto;
+    }
+
+    .signup section {
+        max-width: 100%;
+        padding: 20px;
+        gap: 12px;
+        border-radius: 10px;
+    }
+
+    .signup h1 {
+        font-size: 24px;
+    }
+
+    .signup section > p {
+        font-size: 12px;
+    }
+
+    .signup form {
+        gap: 10px;
+    }
+
+    .signup form input {
+        height: 36px;
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    .signup form > div {
+        gap: 8px;
+    }
+
+    .signup form button {
+        width: 100px;
+        height: 36px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+
+    .signup a {
+        font-size: 13px;
+    }
 }
