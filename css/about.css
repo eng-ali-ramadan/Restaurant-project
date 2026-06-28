@@ -1,0 +1,244 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+header{
+    margin-top: 0;
+}
+
+/* ================= OUR HISTORY ================= */
+
+.our_img{
+    margin: 100px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 60px;
+}
+
+.our{
+    margin: 80px 0;
+}
+
+.our_title{
+    margin-bottom: 20px;
+}
+
+.our_title h2{
+    font-size: 28px;
+}
+
+.our_pragraph{
+    width: 70%;
+}
+
+.our_pragraph p{
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.back_img img{
+    width: 450px;
+    height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ================= BOXES ================= */
+
+.boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 120px;
+    padding: 0 20px;
+}
+
+.box_1,
+.box_2,
+.box_3,
+.box_4{
+    width: 230px;
+    height: 220px;
+    border: 1px solid #949494;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.elements_in_box{
+    text-align: center;
+}
+
+.elements_in_box img{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.elements_in_box h3{
+    margin-bottom: 10px;
+}
+
+.box_1:hover,
+.box_2:hover,
+.box_3:hover,
+.box_4:hover{
+    transform: translateY(-10px);
+    background: #f3f3f3;
+    cursor: pointer;
+}
+
+/* ================= TEAM ================= */
+
+.imges{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.img_1,
+.img_2,
+.img_3{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.img_1:hover,
+.img_2:hover,
+.img_3:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.back_img_1,
+.back_img_2,
+.back_img_3{
+    background: #f5f5f5;
+}
+
+.back_img_1 img,
+.back_img_2 img,
+.back_img_3 img{
+    height: 250px;
+    object-fit: cover;
+}
+
+.elements_in_img h3{
+    margin-top: 15px;
+}
+
+.elements_in_img p{
+    margin: 10px 0;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.social img{
+    width: 35px;
+}
+
+/* ================= SERVICES ================= */
+
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    gap: 30px;
+}
+
+.about img{
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px){
+
+    .our_img{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .our_pragraph{
+        width: 100%;
+    }
+
+    .boxes{
+        flex-wrap: wrap;
+    }
+
+    .about{
+        flex-wrap: wrap;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px){
+
+    .our_img{
+        margin: 50px 15px;
+    }
+
+    .back_img img{
+        width: 100%;
+        height: auto;
+    }
+
+    .box_1,
+    .box_2,
+    .box_3,
+    .box_4{
+        width: 90%;
+        height: 200px;
+    }
+
+    .img_1,
+    .img_2,
+    .img_3{
+        width: 90%;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about img{
+        width: 90px;
+    }
+
+    .our_title h2{
+        font-size: 24px;
+    }
+
+    .our_pragraph p{
+        font-size: 16px;
+    }
+}

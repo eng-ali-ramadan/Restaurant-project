@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dash.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+            <h2 class="fw-bold text-danger m-0">Dashboard</h2>
+            
+            <a href="../html/index.html" class="btn btn-outline-danger rounded-pill px-4 fw-bold">
+                <i class="fa-solid fa-house me-2"></i> back home
+            </a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card shadow-sm p-4 border-0 rounded-4">
+                    <h5 class="fw-bold mb-3 text-secondary" id="form-title">Add New Product</h5>
+                    <form id="product-form" class="needs-validation" novalidate>
+                        
+                        <div class="mb-3">
+                            <label for="product-name" class="form-label">Product Name</label>
+                            <input type="text" id="product-name" class="form-control" placeholder="Example: Pizza Margherita" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="product-price" class="form-label">Price in (EGP)</label>
+                            <input type="number" id="product-price" class="form-control" placeholder="" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="product-category" class="form-label">Category</label>
+                            <select id="product-category" class="form-select" required>
+                                <option value="" selected disabled>Select Category</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Main Dishes">Main Dishes</option>
+                                <option value="Drinks">Drinks</option>
+                                <option value="Desserts">Desserts</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="product-image" class="form-label">Picture</label>
+                            <input type="file" id="product-image" class="form-control" accept="image/*" required>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-danger w-100 rounded-pill py-2 fw-bold">Save Product</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card shadow-sm border-0 rounded-4 p-4 h-100">
+                    <h5 class="fw-bold mb-3 text-secondary">products (<span id="total-products-count">0</span>)</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>picture </th>
+                                    <th>name</th>
+                                    <th>category</th>
+                                    <th>price</th>
+                                    <th class="text-center">control</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashboard-table-body">
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/produ.js"></script> 
+    <script src="../js/dash.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

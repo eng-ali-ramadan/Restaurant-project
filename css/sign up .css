@@ -1,0 +1,78 @@
+.signup{
+    height: 800px;
+    width: 100%;
+display: flex;
+font-size: 20px;
+
+}
+
+ .signup section {
+    margin: auto;
+    height: 450px;
+    width: 400px; 
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #eeeaea;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.signup h1{
+    font-size: 45px;
+}
+.signup form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+    
+    
+ .signup section:hover{
+    
+     box-shadow: 0 10px 20px rgba(255, 0, 0, 0.137);
+    transform:scaleY(1.005);
+}
+.signup form input{
+    margin: auto;
+    height: 35px;
+    width: 230px;
+    border-radius: 50px;
+    padding-left: 20px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.123);
+
+}
+.signup form input:hover{
+        box-shadow: 1px 10px 10px rgba(255, 0, 0, 0.091);
+        transform:scaleY(1.005);
+
+}
+.signup form input:focus{
+    border: 1px solid #ff0000b8 !important;
+}
+
+
+.signup form button{
+    margin-left: -90px;
+
+    border-radius: 50px;
+    width: 120px;
+    height: 40px; 
+    color: black;
+    background-color: #ff0000b8;
+    border: none;
+}
+ .signup form button:hover{
+    color: white;
+    transition: 0.5s;
+}
+.signup a{
+    position: relative;
+    left: 70px;
+    text-decoration: none;
+    color: red;
+    
+}

@@ -1,0 +1,33 @@
+/* تنسيق أزرار الفلترة التصنيفية الدائري المطابق للصورة تماماً */
+.btn-filter {
+    border: 1px solid #ced4da !important;
+    background-color: #fff !important;
+    color: #212529 !important;
+    padding: 10px 26px !important;
+    border-radius: 30px !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    cursor: pointer;
+    width: auto !important;
+}
+
+.btn-filter:hover {
+    background-color: #f8f9fa !important;
+    border-color: #adb5bd !important;
+}
+
+/* ستايل تلوين الزرار النشط باللون العنابي المطابق للصورة */
+.btn-filter.active {
+    background-color: #ad343e !important; 
+    border-color: #ad343e !important;
+    color: #fff !important;
+}
+
+/* تحسين رص كروت المنتجات لتناسب الجريد */
+ /* #menu-products-grid.discount-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 40px;
+    justify-content: center;
+    margin-top: 60px;
+}  */

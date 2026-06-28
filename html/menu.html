@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro Bliss - Our Menu</title>
+    <link rel="stylesheet" href="../css/menu_page.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/header.css">
+     <link rel="stylesheet" href="../css/index.css"> 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+ 
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src=" " alt="">
+               <h1>Bistro Bliss</h1> 
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="../html/index.html">Home</a></li>
+                    <li><a href="../html/about.html">About</a></li>
+                    <li><a href="../html/menu.html" class="active">Menu</a></li>
+                    <li><a href="../html/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="third-clo">
+<div class="search-container mb-4 text-center">
+    <input type="text" id="menu-search-input" class="form-control d-inline-block" placeholder="Search">
+</div>                <a href="../html/login.html"><i class="fa-solid fa-right-to-bracket"></i></a>
+                
+                               <a class="cart-icon-wrapper" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+                    <i class="bi bi-bag"></i>
+                    <span id="cart-count" class="badge rounded-circle bg-danger cart-badge">0</span>
+                </a>
+                <a href="./dash.html"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </nav> 
+    </header>  
+<br> <br> 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasCartLabel">
+                <i class="bi bi-bag-check-fill text-danger me-2"></i> Cart
+            </h5>
+            <button type="button" class="btn-close ms-auto me-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <div id="cart-items-wrapper" class="overflow-auto pe-2" style="max-height: 70vh;">
+                <p id="empty-msg" class="text-center text-muted mt-5">cart is empty.</p>
+            </div>
+
+            <div class="border-top pt-3 mt-2">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fw-bold fs-5"> total:</span>
+                    <span id="cart-total" class="fw-bold fs-5 text-success">0 EGP</span>
+                </div>
+                <button class="btn btn-danger w-100 py-2 fw-bold rounded-pill">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="menu-page container my-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold" style="text-align: center; margin-bottom: 20px;">Our Menu</h1>
+            <p class="text-muted mx-auto" style="max-width: 600px; text-align: center; font-size: 16px;">
+                We consider all the drivers of change gives you the components you need to change to create a truly happen.
+            </p>
+        </div>
+
+        <div class="d-flex justify-content-center flex-wrap gap-2 mb-5 filter-buttons-container" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 40px;">
+            <button class="btn btn-filter active" data-category="all">All</button>
+            <button class="btn btn-filter" data-category="Breakfast">Breakfast</button>
+            <button class="btn btn-filter" data-category="Main Dishes">Main Dishes</button>
+            <button class="btn btn-filter" data-category="Drinks">Drinks</button>
+            <button class="btn btn-filter" data-category="Desserts">Desserts</button>
+        </div>
+
+        <div id="menu-products-grid" class="discount-card">
+            </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h1>Bistro Bliss</h1>
+            <p>In the new era of technology we look in the future with certainty and pride for our company.</p>
+        </div>
+        <div class="second-side">
+            <h4>Pages</h4>
+            <ul>
+                <li><a href="../html/index.html">Home</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/menu.html">Menu</a></li>
+                <li><a href="../html/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="last-side">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="mail">
+            <p>Email</p>
+            <a href="mailto:asd583129@gmail.com"><p>asd583129@gmail.com</p></a> 
+        </div>
+        <div class="copyright">
+            <hr>
+            <p>Copyright © 2026 FITU Developer. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="../js/produ.js"></script>   
+        <script src="../js/menu_logic.js"></script> 
+            <script src="../js/search.js"></script>
+
+         <script src="../js/cart.js"></script>      
+           <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
